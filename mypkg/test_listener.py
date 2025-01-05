@@ -19,7 +19,15 @@ class SimilarityListener(Node):
 def main():
     rclpy.init()
     node = SimilarityListener()
-    rclpy.spin(node)
+
+    timeout = 5
+    start_time = time.time()
+
+    while rclpy.ok():
+        rclpy.spin_once(node)
+        if time.time() - start_time > timeout:
+            break 
+
     node.destroy_node()
     rclpy.shutdown()
 
