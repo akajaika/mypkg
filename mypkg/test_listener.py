@@ -22,18 +22,15 @@ class SimilarityListener(Node):
             self.get_logger().info(f"Received filenames: {msg.data}")
             self.received_data2 = True  
 
-    def shutdown_node(self):
-        self.get_logger().info("Shutting down node after receiving data.")
-        rclpy.shutdown()  
-
 def main():
     rclpy.init()
     node = SimilarityListener()
 
-    while not (node.received_data1 or node.received_data2):  
+    while not (node.received_data1 and node.received_data2):  
         rclpy.spin_once(node)  
     
-    node.shutdown_node()  
+    # ノードシャットダウンの方法を修正
+    rclpy.shutdown()  
 
 if __name__ == '__main__':
     main()

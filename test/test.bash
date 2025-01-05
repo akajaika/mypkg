@@ -12,4 +12,5 @@ timeout 10 python3 similality_images.py
 
 cat /tmp/mypkg.log |
 grep 'Received similarity data'
+cat /tmp/mypkg.log |
 grep 'Received filenames'
