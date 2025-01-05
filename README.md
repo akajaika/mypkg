@@ -16,7 +16,7 @@
 - A-KAZE
 
 ## テスト済みの環境
-  * GitHub Actions  
+  * GitHub Actions 2.321.0
     * Ubuntu 22.04 LTS
         * ~~~
 
@@ -69,3 +69,4 @@ Topics:
 ## 著作権・ライセンス
   * このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
   * © 2024 Kai Nonaka
+  * [A-KAZE](https://github.com/pablofdezalc/akaze)(BSD-3-Clause license)
