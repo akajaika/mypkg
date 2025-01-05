@@ -7,9 +7,8 @@ cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc 
 cd $dir/ros2_ws/src/mypkg/mypkg/
-timeout 20 python3 test_listener.py > /tmp/mypkg.log
+timeout 20 python3 test_listener.py > /tmp/mypkg.log &
 timeout 20 python3 similality_images.py
-timeout 20 python3 test_listener.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log
 echo "Log content:"
