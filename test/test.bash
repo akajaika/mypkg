@@ -10,6 +10,6 @@ cd $dir/ros2_ws/src/mypkg/mypkg/
 timeout 10 python3 test_listener.py > /tmp/mypkg.log
 timeout 10 python3 similality_images.py
 
-# cat /tmp/mypkg.log |
+cat /tmp/mypkg.log |
 # grep 'Received similarity data'
 # grep 'Received filenames'
