@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'similality_images = mypkg.similality_images:main',
+            'test_listener = mypkg.test_listener:main'
         ],
     },
 )

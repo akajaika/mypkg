@@ -35,7 +35,6 @@ class SimilarityPublisher(Node):
 
         # 画像ディレクトリのすべてのファイルを処理
         files = os.listdir(IMG_DIR)
-        self.get_logger().info(f"Files to process: {files}")
 
         for file in files:
             if file == TARGET_FILE:
@@ -63,7 +62,6 @@ class SimilarityPublisher(Node):
                 ret = sum(dist) / len(dist)
                 filenames.append(file)
                 similarity_results.append(ret)
-                self.get_logger().info(f"{file}: {ret}")
             except cv2.error as e:
                 self.get_logger().error(f"OpenCV error with file {file}: {e}")
             except Exception as e:
