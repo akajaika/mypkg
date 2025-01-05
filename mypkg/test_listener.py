@@ -3,6 +3,7 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32MultiArray, String
+import time
 
 class SimilarityListener(Node):
     def __init__(self):
