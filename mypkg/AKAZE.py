@@ -3,11 +3,13 @@ import os
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32MultiArray
+from std_msgs.msg import String
 
 class SimilarityPublisher(Node):
     def __init__(self):
         super().__init__('similarity_publisher')
         self.similarity_publisher = self.create_publisher(Float32MultiArray, 'similar', 10)
+        self.filename_publisher = self.create_publisher(String, 'file_names', 10)
         self.process_images()
 
     def process_images(self):
@@ -27,6 +29,7 @@ class SimilarityPublisher(Node):
 
         # 類似度結果を格納する配列
         similarity_results = []
+        filenames = []
 
         # 画像ディレクトリのすべてのファイルを処理
         files = os.listdir(IMG_DIR)
@@ -56,6 +59,7 @@ class SimilarityPublisher(Node):
 
                 dist = [m.distance for m in matches]
                 ret = sum(dist) / len(dist)
+                filenames.append(file)
                 similarity_results.append(ret)
                 self.get_logger().info(f"{file}: {ret}")
             except cv2.error as e:
@@ -67,6 +71,10 @@ class SimilarityPublisher(Node):
         array_points = Float32MultiArray()
         array_points.data = similarity_results
         self.similarity_publisher.publish(array_points)
+
+        filenames_array = String()
+        filenames_array.data = ', '.join(filenames) 
+        self.filename_publisher.publish(filenames_array)
 
 
 def main():
