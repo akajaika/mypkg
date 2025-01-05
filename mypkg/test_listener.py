@@ -3,7 +3,6 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32MultiArray, String
-import time
 
 class SimilarityListener(Node):
     def __init__(self):
@@ -20,15 +19,7 @@ class SimilarityListener(Node):
 def main():
     rclpy.init()
     node = SimilarityListener()
-
-    timeout = 5
-    start_time = time.time()
-
-    while rclpy.ok():
-        rclpy.spin_once(node)
-        if time.time() - start_time > timeout:
-            break 
-
+    rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
 
