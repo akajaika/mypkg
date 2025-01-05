@@ -12,7 +12,7 @@ timeout 20 python3 similality_images.py
 
 cat /tmp/mypkg.log
 
-python3 test_listener.py
+timeout 1 python3 similality_images.py
 
 grep 'Received similarity data' /tmp/mypkg.log
 grep 'Received filenames' /tmp/mypkg.log
