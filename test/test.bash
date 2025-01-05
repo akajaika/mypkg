@@ -7,8 +7,8 @@ cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc 
 cd $dir/ros2_ws/src/mypkg/mypkg/
-timeout 10 python3 test_listener.py > /tmp/mypkg.log
-timeout 10 python3 similality_images.py
+python3 test_listener.py > /tmp/mypkg.log
+python3 similality_images.py
 
 grep 'Received similarity data' /tmp/mypkg.log
 grep 'Received filenames' /tmp/mypkg.log
