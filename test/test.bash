@@ -12,3 +12,6 @@ timeout 20 python3 similality_images.py
 
 cat /tmp/mypkg.log
 
+run: |
+    echo "Log content:"
+    cat /tmp/mypkg.log
