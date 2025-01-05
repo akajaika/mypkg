@@ -9,7 +9,7 @@ source $dir/.bashrc
 # timeout 10 ros2 run mypkg test_listener > /tmp/mypkg.log
 cd $dir/ros2_ws/src/mypkg/mypkg/
 timeout 10 python3 similality_images.py
-# timeout 10 ros2 topic echo /similar
+timeout 10 ros2 topic echo /similar
 
 # cat /tmp/mypkg.log |
 # grep 'Received similarity data: array'

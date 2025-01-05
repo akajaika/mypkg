@@ -18,7 +18,7 @@
 ## テスト済みの環境
   * GitHub Actions 2.321.0
     * Ubuntu 22.04 LTS
-        * ~~~
+        * Python 3.10.6
 
 
 ## 使用準備
