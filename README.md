@@ -5,7 +5,7 @@
 
 また、このパッケージは千葉工業大学 未来ロボティクス学科 2024年度 ロボットシステム学内で行った内容に、課題で作成したファイルを追加したものです。
 
-[![test](https://github.com/akajaika/robosys2024/actions/workflows/test.yml/badge.svg)](https://github.com/akajaika/robosys2024/actions/workflows/test.yml)
+[![test](https://github.com/akajaika/robosys2024_2/actions/workflows/test.yml/badge.svg)](https://github.com/akajaika/robosys2024_2/actions/workflows/test.yml)
 
 このリポジトリ内の[similality_images.py](https://github.com/akajaika/robosys2024_2/blob/main/mypkg/similality_images.py)は、[ピーター (id:tetrapod117)](https://tetlab117.hatenablog.com/about)の[PythonとOpenCVを用いた顔の類似度判定についての話](https://tetlab117.hatenablog.com/entry/2017/09/28/163638)を参考に作られています。
 
