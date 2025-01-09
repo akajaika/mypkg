@@ -1,4 +1,6 @@
 ##!/usr/bin/env python
+# SPDX-FileCopyrightText: 2025 Kai Nonaka
+# SPDX-License-Identifier: BSD-3-Clause:
 
 import cv2
 import os

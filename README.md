@@ -19,24 +19,6 @@
     * Ubuntu 22.04 LTS
         * Python 3.10.6
 
-
-## 使用準備
-下記コマンドを使用し、適当な場所でクローンを行ってください。
-
-```shell
-$ git clone https://github.com/akajaika/robosys2024_2.git
-$ cd robosys2024_2
-```
-
-事前にGitがインストールされていない場合、以下のコマンドからインストールとバージョンの確認を行ってください。
-
-```shell
-$ sudo apt update
-$ sudo apt install git
-$ git --version
-```
-
-
 ## similality_images 使い方
 /mypkg/mypkg/images　の中に基準となるpngファイルをtarget.pngという名前で1枚入れます。また、比較したいpngファイルを任意の数入れsimilality_imagesを実行します。出力された数値が低いほど、類似度が高いということを示します。
 
@@ -67,5 +49,5 @@ Topics:
 
 ## 著作権・ライセンス
   * このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
-  * © 2024 Kai Nonaka
+  * © 2025 Kai Nonaka
   * [A-KAZE](https://github.com/pablofdezalc/akaze)(BSD-3-Clause license)
