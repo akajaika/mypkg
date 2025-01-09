@@ -18,7 +18,7 @@ class SimilarityPublisher(Node):
 
     def process_images(self):
         TARGET_FILE = 'target.png'
-        IMG_DIR = os.path.abspath(os.path.dirname(__file__)) + '/images/'
+        IMG_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../../../..'))+'/src/mypkg/mypkg/images/'
         IMG_SIZE = (200, 200)
 
         # ターゲット画像の準備
