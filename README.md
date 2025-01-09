@@ -1,7 +1,7 @@
 # mypkg
 ## robosys2024 課題2
 
-このパッケージは、一つの基準となる写真とその他の写真の類似度をOpenCVのライブアリである特徴量マッチング（A-KAZE）を用いて出力するROS2パッケージです。
+このパッケージは、一つの基準となる写真とその他の写真の類似度をOpenCVのライブアリである特徴量マッチング（A-KAZE）を用いて出力するROS 2パッケージです。
 
 また、このパッケージは千葉工業大学 未来ロボティクス学科 2024年度 ロボットシステム学内で行った内容に、課題で作成したファイルを追加したものです。
 
@@ -23,14 +23,13 @@
 /mypkg/mypkg/images　の中に基準となるpngファイルをtarget.pngという名前で1枚入れます。また、比較したいpngファイルを任意の数入れsimilality_imagesを実行します。出力された数値が低いほど、類似度が高いということを示します。
 
 ```shell
-$ cd mypkg/mypkg/
-$ python3 similality_images.py
+$ ros2 run mypkg similality_images
 ```
 
 受信例(別端末にて)
 
 ```shell
-$ python3 test_listener.py
+$ ros2 run mypkg test_listener
 [INFO] [1736071964.498597056] [similarity_listener]: Received similarity data: array('f', [141.43011474609375, 146.19354248046875])
 [INFO] [1736071964.499113665] [similarity_listener]: Received filenames: スクリーンショット 2024-12-10 155148.png, スク リーンショット 2024-12-27 192639.png
 ```
